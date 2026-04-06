@@ -1,0 +1,165 @@
+.trips-page { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.trips-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.trips-header h1 { margin-bottom: 0.2rem; }
+
+/* Filter tabs */
+.filter-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.filter-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.825rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-tab:hover { background: var(--color-surface-2); color: var(--text-primary); }
+.filter-tab--active { background: var(--color-accent-soft); color: var(--color-accent); border-color: var(--color-accent-soft); }
+
+.filter-count {
+  background: var(--color-surface-2);
+  border-radius: 999px;
+  padding: 0 0.4rem;
+  font-size: 0.72rem;
+}
+.filter-tab--active .filter-count { background: rgba(74,158,255,0.2); }
+
+/* Trip list */
+.trip-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.trip-card { padding: 0; overflow: hidden; cursor: default; }
+
+.trip-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  user-select: none;
+  gap: 1rem;
+}
+.trip-card-header:hover { background: rgba(255,255,255,0.02); }
+
+.trip-card-left { display: flex; align-items: center; gap: 0.85rem; flex: 1; min-width: 0; }
+
+.trip-summit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-summit);
+  flex-shrink: 0;
+}
+
+.trip-name {
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trip-meta {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.1rem;
+}
+.trip-meta span { display: flex; align-items: center; gap: 0.25rem; }
+
+.trip-card-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Mini avatars */
+.trip-participant-avatars { display: flex; }
+.mini-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid var(--color-surface);
+  margin-left: -6px;
+}
+.mini-avatar:first-child { margin-left: 0; }
+.mini-avatar--overflow { background: var(--color-surface-2); color: var(--text-secondary); }
+
+/* Expanded details */
+.trip-card-details { padding: 0 1.25rem 1.25rem; }
+
+.trip-metrics { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.metric-item { display: flex; align-items: center; gap: 0.35rem; font-size: 0.875rem; }
+
+.trip-weather {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+}
+
+.trip-participants { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.participant-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.3rem;
+  border-radius: 999px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  font-size: 0.8rem;
+}
+
+.trip-notes {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.trip-images { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+.trip-image-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.trip-actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+
+/* Empty state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  text-align: center;
+}
